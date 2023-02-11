@@ -1,48 +1,36 @@
-import { Popover, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Fragment } from 'react'
+import { Popover, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Fragment } from "react";
 
 const solutions = [
   {
-    name: 'Fund Management',
-    description: 'Manage all the money of team.',
-    href: '##',
+    name: "Getting Started",
+    description: "How to start this app",
+    href: "##",
     icon: IconOne,
   },
   {
-    name: 'Schedule Management',
-    description: 'Manage all the schedule and events',
-    href: '##',
+    name: "Contact us",
+    description: "Contact with email, skype, Telegram, whatsapp and linkedIn",
+    href: "##",
     icon: IconTwo,
   },
-  {
-    name: 'Health care',
-    description: 'Fetch All members health info and manage',
-    href: '##',
-    icon: IconThree,
-  },
-  {
-    name: 'Meeting management',
-    description: 'Manage all the meeting and party',
-    href: '##',
-    icon: IconThree,
-  },
-]
+];
 
 export default function Example() {
   return (
-    <div className="fixed top-5 w-full max-w-sm px-4">
+    <div className="fixed top-5 mx-10 w-full max-w-sm px-4">
       <Popover className="relative">
         {({ open }) => (
           <>
             <Popover.Button
               className={`
-                ${open ? '' : 'text-opacity-90'}
+                ${open ? "" : "text-opacity-90"}
                 group inline-flex items-center rounded-md px-3 py-2 text-base font-medium text-slate-800 hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
             >
-              <span>Menu</span>
+              <span>Learn</span>
               <ChevronDownIcon
-                className={`${open ? '' : 'text-opacity-70'}
+                className={`${open ? "" : "text-opacity-70"}
                   ml-2 h-5 w-5 text-slate-800 transition duration-150 ease-in-out group-hover:text-opacity-80`}
                 aria-hidden="true"
               />
@@ -79,21 +67,6 @@ export default function Example() {
                       </a>
                     ))}
                   </div>
-                  <div className="bg-gray-50 p-4">
-                    <a
-                      href="##"
-                      className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                    >
-                      <span className="flex items-center">
-                        <span className="text-sm font-medium text-gray-900">
-                          Documentation
-                        </span>
-                      </span>
-                      <span className="block text-sm text-gray-500">
-                        Start integrating products and tools
-                      </span>
-                    </a>
-                  </div>
                 </div>
               </Popover.Panel>
             </Transition>
@@ -101,7 +74,7 @@ export default function Example() {
         )}
       </Popover>
     </div>
-  )
+  );
 }
 
 function IconOne() {
@@ -134,7 +107,7 @@ function IconOne() {
         strokeWidth="2"
       />
     </svg>
-  )
+  );
 }
 
 function IconTwo() {
@@ -160,7 +133,7 @@ function IconTwo() {
         strokeWidth="2"
       />
     </svg>
-  )
+  );
 }
 
 function IconThree() {
@@ -180,5 +153,5 @@ function IconThree() {
       <rect x="29" y="16" width="2" height="20" fill="#FB923C" />
       <rect x="33" y="12" width="2" height="24" fill="#FB923C" />
     </svg>
-  )
+  );
 }
