@@ -5,7 +5,7 @@ import Learn from "./Learn";
 export default function Header() {
   return (
     <>
-      <div className="h-20 bg-slate-50 border-solid	">
+      <div className="h-20 w-screen fixed bg-slate-50 border-solid	">
         <div className="w-[70%] mx-[15%] flex justify-around">
           <div className="flex justify-between">
             <div className="header-logo-background-image "></div>

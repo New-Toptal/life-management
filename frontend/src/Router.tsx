@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRoutes, RouteObject, Navigate } from "react-router-dom";
 import Layout from "./layout/index";
+import Home from "./pages/Home";
 
 export default function Router() {
   const router = [
@@ -9,7 +10,7 @@ export default function Router() {
       children: [
         {
           path: "/",
-          // element: <Home />,
+          element: <Home />,
         },
       ],
     },
