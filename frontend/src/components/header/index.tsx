@@ -1,8 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Solution from "./SolutionMenu";
 import Learn from "./Learn";
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Header() {
+
+  const Navigate = useNavigate();
+
+  const handleSignUpClick = () => {
+    Navigate('/signup')
+  }
+  
+  const handleLoginClick = () => {
+    Navigate('/login')
+  }
+  
   return (
     <>
       <div className="h-20 w-screen fixed bg-slate-50 border-solid	">
@@ -18,10 +31,10 @@ export default function Header() {
             <Learn />
           </div>
           <div className="flex justify-around w-[15%]">
-            <button className="backface-visibility-hidden  flex transform items-center  bg-indigo-500  px-3 py-2 text-sm font-medium text-white transition hover:scale-105 hover:bg-opacity-90 focus:outline-none active:bg-opacity-80 h-12 mt-4 rounded-md">
+            <button className="backface-visibility-hidden  flex transform items-center  bg-indigo-500  px-3 py-2 text-sm font-medium text-white transition hover:scale-105 hover:bg-opacity-90 focus:outline-none active:bg-opacity-80 h-12 mt-4 rounded-md" onClick={handleSignUpClick}>
               SignUp
             </button>
-            <button className="backface-visibility-hidden  flex transform items-center  bg-indigo-500  px-3 py-2 text-sm font-medium text-white transition hover:scale-105 hover:bg-opacity-90 focus:outline-none active:bg-opacity-80 h-12 mt-4 rounded-md">
+            <button className="backface-visibility-hidden  flex transform items-center  bg-indigo-500  px-3 py-2 text-sm font-medium text-white transition hover:scale-105 hover:bg-opacity-90 focus:outline-none active:bg-opacity-80 h-12 mt-4 rounded-md" onClick={handleLoginClick}>
               Login
             </button>
           </div>
